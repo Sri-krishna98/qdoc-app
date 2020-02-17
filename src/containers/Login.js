@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import LoaderButton from '../components/LoaderButton';
 import "./Login.css";
-import * as AWS from 'aws-sdk/global';
-import hooksLib from '../libs/hooksLib';
-import { FileSystemCredentials } from "aws-sdk/global";
+// import { FileSystemCredentials } from "aws-sdk/global";
 import { useFormFields } from "../libs/hooksLib";
-
+import {Auth} from 'aws-amplify';
 export default function Login(props) {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-
+  
     const [isLoading, setIsLoading] = useState(false);
     const[fields, handleFieldchange] = useFormFields({
         email: "",
@@ -25,8 +21,8 @@ export default function Login(props) {
     event.preventDefault();
   
     try {
-    //   await Auth.signIn(email, password);
-        if(fields.email==="demo@demo" && fields.password==="qwerty")
+      await Auth.signIn(fields.email, fields.password);
+        // if(fields.email==="demo@demo" && fields.password==="qwerty")
         props.userHasAuthenticated(true);
         props.history.push("/");
     } catch (e) {
