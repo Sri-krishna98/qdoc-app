@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div className="Home">
       <div className="lander">
-        <h1>Qdocs</h1>
+        <h1>Qdox</h1>
         <p>A Document Handling App</p>
-        <img src = {Qdocs} />
+        <img src = {Qdocs} alt = "Doc App" />
       </div>
     </div>
   );

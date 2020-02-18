@@ -14,7 +14,7 @@ function App(props) {
       <Navbar fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">Qdocs</Link>
+            <Link to="/">Qdox</Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -29,6 +29,9 @@ function App(props) {
           <LinkContainer to="/login">
           <NavItem>Login</NavItem>
           </LinkContainer>
+          <LinkContainer to="/Docinput/new">
+          <NavItem>DocInput</NavItem>
+          </LinkContainer>  
           </>
           }
          <NavItem>Login</NavItem>

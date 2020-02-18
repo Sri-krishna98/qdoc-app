@@ -24,7 +24,7 @@ export default function Login(props) {
       await Auth.signIn(fields.email, fields.password);
         // if(fields.email==="demo@demo" && fields.password==="qwerty")
         props.userHasAuthenticated(true);
-        props.history.push("/");
+        // props.history.push("/");
     } catch (e) {
       alert(e.message);
       setIsLoading(false);  
