@@ -1,8 +1,8 @@
 export default {
-  MAX_ATTACHMENT_SIZE: 1000,
+  MAX_ATTACHMENT_SIZE: 5000000,
     s3: {
       REGION: "ap-south-1",
-      BUCKET: "https://www.google.com/url?q=http://test-static-pool.s3-website.ap-south-1.amazonaws.com/&sa=D&source=hangouts&ust=1581513182701000&usg=AFQjCNFFtRYz2JAVg-iIchBIwBp_Spi8Fg"
+      BUCKET: "test-lambda-tt"
     },
 
     cognito: {

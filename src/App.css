@@ -1,7 +1,14 @@
-.App {
-  margin-top: 15px;
+.App .navbar-brand {
+  font-weight: bolder;
+  color: black;
 }
 
-.App .navbar-brand {
-  font-weight: bold;
+.App .navbar {
+  /* background-color: lightgray; */
+  /* border-color: black; */
+}
+.App .navbar-default .navbar-nav > li > a {
+  font-size: 17px;
+  border-color: tomato;
+  color: black;
 }

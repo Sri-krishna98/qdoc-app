@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Qdocs from './Qdocs.png'
+import dribble  from './dribble.gif'
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <div className="lander">
         <h1>Qdox</h1>
         <p>A Document Handling App</p>
-        <img src = {Qdocs} alt = "Doc App" />
+        <img src = {dribble} alt = "Doc App" />
       </div>
     </div>
   );

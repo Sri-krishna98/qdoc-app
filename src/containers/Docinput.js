@@ -1,10 +1,11 @@
 import React, {useRef, useState} from 'react';
 import {FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import LoaderButton from '../components/LoaderButton';
-// import config from '../config';
+import config from '../config';
 import './Docinput.css';
-// import {Storage} from 'aws-amplify';
+import {Storage} from 'aws-amplify';
 import {s3UploadFile} from '../libs/awslib';
+import {s3upload} from '../libs/s3lib';
 
 export default function Docinput(props) {
     const file = useRef(null);
@@ -21,24 +22,18 @@ export default function Docinput(props) {
 
     async function handleSubmit(event){
         event.preventDefault();
-        // if(file.current && file.current.size >config.MAX_ATTACHMENT_SIZE){
-        //     alert('Please pick a file smaller than 100MB');
-        //     return;
-        // }
-        setIsLoading(true);
-
-        try {
-            const attachment = file.current
-            ? await s3UploadFile(file.current)
-            : null;
-            props.history.push('/')
-        }
-        catch(e){
-            alert(e);
-            setIsLoading(false);
+        if (file.current && file.current.size > config.MAX_ATTACHMENT_SIZE) {
+            alert(
+              `Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE /
+                1000000} MB.`
+            );
+            return;
+              }
+              else {
+                  s3upload(file);
+                
         }
     }
-
     return (
         <div className = "Docinput">
          <form onSubmit={handleSubmit}>

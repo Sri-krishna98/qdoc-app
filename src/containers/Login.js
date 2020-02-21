@@ -12,7 +12,6 @@ export default function Login(props) {
         email: "",
         password: ""
     }); 
-
   function validateForm() {
     return fields.email.length > 0 && fields.password.length > 0;
   }
