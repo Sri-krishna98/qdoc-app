@@ -3,10 +3,7 @@
   color: black;
 }
 
-.App .navbar {
-  /* background-color: lightgray; */
-  /* border-color: black; */
-}
+
 .App .navbar-default .navbar-nav > li > a {
   font-size: 17px;
   border-color: tomato;
