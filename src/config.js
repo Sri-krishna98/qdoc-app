@@ -1,7 +1,7 @@
 export default {
   MAX_ATTACHMENT_SIZE: 5000000,
     s3: {
-      REGION: "ap-south-1",
+      REGION: "us-east-1",
       BUCKET: "test-lambda-tt"
     },
 

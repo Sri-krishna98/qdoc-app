@@ -28,6 +28,9 @@ function App(props) {
             <LinkContainer to="/Docinput/new">
             <NavItem>DocInput</NavItem>
             </LinkContainer>
+            <LinkContainer to="/Docoutput">
+            <NavItem>Docoutput</NavItem>
+            </LinkContainer>
             <NavItem onClick={handleLogout}>Logout</NavItem>  
             </>
           ) 
